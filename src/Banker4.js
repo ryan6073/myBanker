@@ -25,7 +25,7 @@ const Banker4 = () => {
 
     const findSafeSequencesRecursive = (sequence) => {
         // eslint-disable-next-line
-      if (sequence.length === processCountEctype) {
+      if (sequence.length == processCountEctype) {
         tempSafeSequences.push([...sequence]);
         return;
       }

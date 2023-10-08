@@ -138,7 +138,7 @@ const Banker2 = () => {
         for(let m = 0; m < processCount && flag1; m++)
             for(let n = 0; n < resourceCount ; n++){
                 // eslint-disable-next-line
-                if( parseInt(sumResources[n]) + parseInt(availableResources[n]) !== resourceValues[n] || parseInt(maxResourceNeeds[m][n]) < 0
+                if( parseInt(sumResources[n]) + parseInt(availableResources[n]) != resourceValues[n] || parseInt(maxResourceNeeds[m][n]) < 0 
                 || parseInt(allocatedResources[m][n]) < 0 || parseInt(availableResources[n]) < 0){
                     notification.error({
                         message: '信息输入有误',

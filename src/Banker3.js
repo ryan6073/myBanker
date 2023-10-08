@@ -158,7 +158,7 @@ const Banker3 = () => {
                 }
             }
             // eslint-disable-next-line
-            if( j === resourceCount ){
+            if( j == resourceCount ){
                 flag[i] = 0;
                 setFlag(flag);
                 for( j = 0; j < resourceCount; j++){
@@ -190,11 +190,11 @@ const Banker3 = () => {
             break;
         }
         // eslint-disable-next-line
-        if(i === processCount){
+        if(i == processCount){
             setIsButtonVisible(false);
-            let l ;
+            let l = 0;
             for( l = 0; l < processCount; l++){
-                if(meetFlag[l] === 0){
+                if(meetFlag[l] == 0){
                     notification.error({
                         message: '无安全序列,存在死锁',
                     });
@@ -203,7 +203,7 @@ const Banker3 = () => {
                 }
             }
             // eslint-disable-next-line
-            if( l === processCount ){
+            if( l == processCount ){
                 const safeSequenceString = safeSequence.join('->P'); // 将safeSequence数组转换为->分隔的字符串
                 notification.success({
                     message: '存在安全序列，系统安全',
@@ -221,7 +221,7 @@ const Banker3 = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        if(overFlag === 1) navigate('/');
+        if(overFlag == 1) navigate('/');
         else navigate('/banker4'); // 导航到 4 页面
     };
 

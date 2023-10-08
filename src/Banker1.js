@@ -6,7 +6,9 @@ import { Form, Input, Button, notification, Card } from 'antd';
 function Banker1() {
   const navigate = useNavigate();
   const {
+    processCount,
     resourceCount,
+    resourceValues,
     setProcessCount,
     setResourceCount,
     setResourceValues,
